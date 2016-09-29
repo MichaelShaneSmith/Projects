@@ -13,11 +13,11 @@ Endpoint	Params 				Definition
 import requests
 
 params = {
-  'key': '<api-key>',
+  'key': '<apikey>',
   'term': '4640',
   'subject': 'EECS',
   "catalog_num": "101-0"
 }
 
-response = requests.get('http://api.asg.northwestern.edu/courses/', params=params)
+response = requests.get('http://api.asg.northwestern.edu/courses/details', params=params)
 print response.text

@@ -1,22 +1,3 @@
-"""
-{"id": 144513, 
-"title": "An Introduction to Computer Science for Everyone", 
-"term": "2016 Fall", 
-"instructor": "Jason D Hartline", 
-"subject": "EECS", 
-"catalog_num": "101-0", 
-"section": "20", 
-"room": "Annenberg Hall G15", 
-"meeting_days": "MoWeFr", 
-"start_time": "11:00", 
-"end_time": "11:50", 
-"seats": 102, 
-"topic": null, 
-"component": "LEC", 
-"class_num": 16794, 
-"course_id": 8093
-"""
-
 import arrow
 import dateutil
 
