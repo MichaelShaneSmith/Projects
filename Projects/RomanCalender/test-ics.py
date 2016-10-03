@@ -1,24 +1,35 @@
+import pytz
+import tempfile
 import arrow
+import os
 import dateutil
 
-from ics import Calendar, Event
+
+from icalendar import Calendar, Event
+from datetime import datetime
+from pytz import timezone
+
+
+def display(cal):
+    print cal.to_ical().replace('\r\n', '\n').strip()
+
 
 def makeCalender(Name, Start_time, End_time, Date):
-	"""Creates a .ics file based on the inputs"""
-	c = Calendar()
-	e = Event()
+	cal = Calendar()
+	cal['summary'] = 'Python Calendaring'
 
-	tz = 'US/Central'
-	DATETIMEFORMAT = 'YYYY-MM-DD HH:mm:ss'
-	
-	e.name = Name
-	e.begin = arrow.get('{} {}'.format(Date, Start_time), DATETIMEFORMAT).replace(tzinfo=dateutil.tz.gettz(tz))
-	e.end = arrow.get('{} {}'.format(Date, End_time), DATETIMEFORMAT).replace(tzinfo=dateutil.tz.gettz(tz))
-	c.events.append(e)
+	tz = timezone('US/Eastern')
 
-	print c.events
+	event = Event()
+	event.add('summary', 'Python meeting about calendaring')
+	event.add('dtstart', datetime(tz.localize(datetime(2016, 9, 30, 1, 0, 0))))
+	event.add('dtend', datetime(tz.localize(datetime(2016, 9, 30, 1, 50, 0))))
 
-	with open('my_schedule.ics', 'w') as f:
-		f.writelines(c)
+	cal.add_component(event)
 
-makeCalender('My cool event', '13:00:00', '13:50:00', '2016-09-09')
+	with open('example.ics', 'w') as f:
+		f.write(cal.to_ical())
+
+	display(cal)
+
+makeCalender('', '13:00:00', '13:50:00', '2016-09-30')
