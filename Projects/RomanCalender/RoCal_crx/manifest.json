@@ -1,0 +1,22 @@
+{
+   "author": "Michael",
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.min.js", "js/popup.js", "js/material.min.js" ],
+      "css": [ "css/style.css" , "css/material.min.css"],
+      "matches": [ "http://*/*" ]
+   } ],
+   "description": "A small description here",
+   "icons": {
+      "128": "img/iconStore.png",
+      "16": "img/icon.png",
+      "48": "img/iconLauncher.png"
+   },
+   "manifest_version": 2,
+   "name": "Roman Calendar",
+   "permissions": [ "activeTab", "downloads" ],
+   "version": "1.0"
+}

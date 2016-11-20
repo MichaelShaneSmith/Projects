@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Title -->      
+	<title>Roman Calendar</title>
+
+	<!-- Imports -->
+	<link rel="stylesheet" href="css/material.min.css">
+	<script src="js/material.min.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/jquery.min.js"></script>     
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">      
+</head>
+<body>
+	<!-- Wide card with share menu button -->
+	<style>
+		.demo-card-wide.mdl-card {
+			width: 512px;
+		}
+
+		.demo-card-wide > .mdl-card__title {
+			color: #96700F	;
+			height: 190px;
+			background: url('http://i.imgur.com/qD5TsEQ.jpg') center / cover;
+			padding-left: 160px;
+			padding-bottom: 0px;
+		}
+
+		.demo-card-wide > .mdl-card__menu {
+			color: #fff;
+		}
+
+		.mdl-card__actions {
+			display: flex;
+			box-sizing:border-box;
+			align-items: center;
+		}
+
+		.mdl-card__actions > .mdl-button--icon {
+			margin-right: 3px;
+			margin-left: 3px;
+		}
+	</style>
+	<div class="mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">Acme</span>
+				<div class="mdl-layout-spacer"></div>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#">Home</a>
+					<a class="mdl-navigation__link" href="#">About</a>
+					<a class="mdl-navigation__link" href="#">Contact</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">The Menu</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="#">Products</a>
+				<a class="mdl-navigation__link" href="#">Services</a>
+				<a class="mdl-navigation__link" href="#">Portfolios</a>
+				<a class="mdl-navigation__link" href="#">Achievements</a>
+			</nav>
+		</div>
+	</div>
+<div class="demo-card-wide mdl-card mdl-shadow--12dp">
+	<div class="mdl-card__title">
+		<h5 class="mdl-card__title-text">
+			<strong>Roman Calendar</strong>
+		</h5>
+	</div>
+	<div class="mdl-card__supporting-text">
+		Enter your class information.
+	</div>
+
+
+
+	<div class="mdl-card__actions mdl-card--border">
+		<form action="#">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="sample3">
+				<label class="mdl-textfield__label" for="sample3">Department Code</label>
+			</div>
+		</form>
+		<div class="mdl-layout-spacer"></div>
+		<form action="#">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="sample3">
+				<label class="mdl-textfield__label" for="sample3">Class Number</label>
+			</div>
+		</form>
+	</div>
+
+	<div class="mdl-card__actions mdl-card--border">
+		<a id = 'pressme' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Enter</a>
+		<div class="mdl-layout-spacer"></div>
+		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">polymer</i></button>
+		<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">file_download</i></button>
+	</div>
+
+	<div class="mdl-card__menu">
+		<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+			<i class="material-icons">fingerprint</i>
+		</button>
+	</div>
+</div>
+</body>
+
+</html>
+
