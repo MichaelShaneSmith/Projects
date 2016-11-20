@@ -27,7 +27,8 @@ def get_info():
 def get_class(dept, num):
 	empty_cal = Calendar()
 	class_cal = RomanCalendar.main(str(dept).upper(), num, empty_cal)
-	return jsonify({'ics': class_cal.to_ical()})
+	#return jsonify({'ics': class_cal.to_ical()})
+	return class_cal.to_ical()
 
 
 
